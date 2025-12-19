@@ -8,23 +8,15 @@
     <script src = "https://unpkg.com/react@18/umd/react.development.js"></script> 
     <script src = "https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     
-    <script type="text/javascript">
+    <!-- Babel Script -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/jsx">
       
       //Seleccionar el elemento div con el id de la aplicación
       const app = document.getElementById('app');
 
-      //Crear elemento h1
-      const header = document.createElement('h1');
-
-      //Crear nuevo nodo de texto para el elemnto h1
-      const text = 'Develop. Preview. Ship.';
-      const headerContent = document.createTextNode(text);
-
-      //agregar texto al elemento h1
-      header.appendChild(headerContent);
-
-      //Colocar el elemnto h1 dentro del div
-      app.appendChild(header);
+      const root = ReactDOM.createRoot(app);
+      root.render(<h1>Develop. Preview. Ship.</h1>);
 
     </script>
 </body>
